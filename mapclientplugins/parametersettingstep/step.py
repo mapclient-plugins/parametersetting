@@ -25,7 +25,7 @@ class ParameterSettingStep(WorkflowStepMountPoint):
         # Ports:
         self.addPort(('http://physiomeproject.org/workflow/1.0/rdf-schema#port',
                       'http://physiomeproject.org/workflow/1.0/rdf-schema#provides',
-                      'python#dict'))
+                      'http://physiomeproject.org/workflow/1.0/rdf-schema#parameters_dict'))
         # Port data:
         self._portData0 = None # python#dict
         # Config:

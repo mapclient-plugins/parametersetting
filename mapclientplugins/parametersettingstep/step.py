@@ -1,4 +1,3 @@
-
 '''
 MAP Client Plugin Step
 '''
@@ -18,16 +17,16 @@ class ParameterSettingStep(WorkflowStepMountPoint):
 
     def __init__(self, location):
         super(ParameterSettingStep, self).__init__('Parameter Setting', location)
-        self._configured = False # A step cannot be executed until it has been configured.
+        self._configured = False  # A step cannot be executed until it has been configured.
         self._category = 'Utility'
         # Add any other initialisation code here:
-        self._icon =  QtGui.QImage(':/parametersettingstep/images/utility.png')
+        self._icon = QtGui.QImage(':/parametersettingstep/images/utility.png')
         # Ports:
         self.addPort(('http://physiomeproject.org/workflow/1.0/rdf-schema#port',
                       'http://physiomeproject.org/workflow/1.0/rdf-schema#provides',
                       'http://physiomeproject.org/workflow/1.0/rdf-schema#parameters_dict'))
         # Port data:
-        self._portData0 = None # python#dict
+        self._portData0 = None  # python#dict
         # Config:
         self._config = {}
         self._config['identifier'] = ''
@@ -55,7 +54,7 @@ class ParameterSettingStep(WorkflowStepMountPoint):
 
         :param index: Index of the port in port list to return.
         """
-        return self._portData0 # python#dict
+        return self._portData0  # python#dict
 
     def configure(self):
         """

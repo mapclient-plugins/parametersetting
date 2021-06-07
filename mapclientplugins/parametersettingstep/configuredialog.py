@@ -1,5 +1,3 @@
-
-
 from PySide2 import QtGui, QtWidgets
 
 from mapclientplugins.parametersettingstep.addparameterdialog import AddParameterDialog
@@ -67,8 +65,9 @@ class ConfigureDialog(QtWidgets.QDialog):
         result = QtWidgets.QMessageBox.Yes
         if not self.validate():
             result = QtWidgets.QMessageBox.warning(self, 'Invalid Configuration',
-                'This configuration is invalid.  Unpredictable behaviour may result if you choose \'Yes\', are you sure you want to save this configuration?)',
-                QtWidgets.QMessageBox.Yes | QtWidgets.QMessageBox.No, QtWidgets.QMessageBox.No)
+                                                   'This configuration is invalid.  Unpredictable behaviour may result if you choose \'Yes\', are you sure you want to save this configuration?)',
+                                                   QtWidgets.QMessageBox.Yes | QtWidgets.QMessageBox.No,
+                                                   QtWidgets.QMessageBox.No)
 
         if result == QtWidgets.QMessageBox.Yes:
             QtWidgets.QDialog.accept(self)
@@ -133,7 +132,7 @@ class ConfigureDialog(QtWidgets.QDialog):
                 except ValueError as e:
                     pass
 
-        assert(None not in parameters)
+        assert (None not in parameters)
         for p in parameters:
             self._addParameter(p[0], p[1])
 

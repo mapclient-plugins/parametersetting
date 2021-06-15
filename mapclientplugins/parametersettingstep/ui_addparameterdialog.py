@@ -1,57 +1,79 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'qt\addparameterdialog.ui'
-#
-# Created: Tue Aug  9 14:25:48 2016
-#      by: pyside-uic 0.2.15 running on PySide 1.2.4
-#
-# WARNING! All changes made in this file will be lost!
+################################################################################
+## Form generated from reading UI file 'addparameterdialog.ui'
+##
+## Created by: Qt User Interface Compiler version 5.15.2
+##
+## WARNING! All changes made in this file will be lost when recompiling UI file!
+################################################################################
 
-from PySide import QtCore, QtGui
+from PySide2.QtCore import *
+from PySide2.QtGui import *
+from PySide2.QtWidgets import *
+
 
 class Ui_AddParameterDialog(object):
     def setupUi(self, AddParameterDialog):
-        AddParameterDialog.setObjectName("AddParameterDialog")
+        if not AddParameterDialog.objectName():
+            AddParameterDialog.setObjectName(u"AddParameterDialog")
         AddParameterDialog.resize(452, 189)
-        self.verticalLayout = QtGui.QVBoxLayout(AddParameterDialog)
-        self.verticalLayout.setObjectName("verticalLayout")
-        self.groupBox = QtGui.QGroupBox(AddParameterDialog)
-        self.groupBox.setTitle("")
-        self.groupBox.setObjectName("groupBox")
-        self.gridLayout = QtGui.QGridLayout(self.groupBox)
-        self.gridLayout.setObjectName("gridLayout")
-        self.label_3 = QtGui.QLabel(self.groupBox)
-        self.label_3.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
+        self.verticalLayout = QVBoxLayout(AddParameterDialog)
+        self.verticalLayout.setObjectName(u"verticalLayout")
+        self.groupBox = QGroupBox(AddParameterDialog)
+        self.groupBox.setObjectName(u"groupBox")
+        self.gridLayout = QGridLayout(self.groupBox)
+        self.gridLayout.setObjectName(u"gridLayout")
+        self.label_3 = QLabel(self.groupBox)
+        self.label_3.setObjectName(u"label_3")
+        self.label_3.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
         self.label_3.setWordWrap(True)
-        self.label_3.setObjectName("label_3")
+
         self.gridLayout.addWidget(self.label_3, 0, 0, 1, 2)
-        self.label = QtGui.QLabel(self.groupBox)
-        self.label.setObjectName("label")
+
+        self.label = QLabel(self.groupBox)
+        self.label.setObjectName(u"label")
+
         self.gridLayout.addWidget(self.label, 1, 0, 1, 1)
-        self.lineEditLabel = QtGui.QLineEdit(self.groupBox)
-        self.lineEditLabel.setObjectName("lineEditLabel")
+
+        self.lineEditLabel = QLineEdit(self.groupBox)
+        self.lineEditLabel.setObjectName(u"lineEditLabel")
+
         self.gridLayout.addWidget(self.lineEditLabel, 1, 1, 1, 1)
-        self.label_2 = QtGui.QLabel(self.groupBox)
-        self.label_2.setObjectName("label_2")
+
+        self.label_2 = QLabel(self.groupBox)
+        self.label_2.setObjectName(u"label_2")
+
         self.gridLayout.addWidget(self.label_2, 2, 0, 1, 1)
-        self.lineEditValue = QtGui.QLineEdit(self.groupBox)
-        self.lineEditValue.setObjectName("lineEditValue")
+
+        self.lineEditValue = QLineEdit(self.groupBox)
+        self.lineEditValue.setObjectName(u"lineEditValue")
+
         self.gridLayout.addWidget(self.lineEditValue, 2, 1, 1, 1)
+
+
         self.verticalLayout.addWidget(self.groupBox)
-        self.buttonBox = QtGui.QDialogButtonBox(AddParameterDialog)
-        self.buttonBox.setOrientation(QtCore.Qt.Horizontal)
-        self.buttonBox.setStandardButtons(QtGui.QDialogButtonBox.Cancel|QtGui.QDialogButtonBox.Ok)
-        self.buttonBox.setObjectName("buttonBox")
+
+        self.buttonBox = QDialogButtonBox(AddParameterDialog)
+        self.buttonBox.setObjectName(u"buttonBox")
+        self.buttonBox.setOrientation(Qt.Horizontal)
+        self.buttonBox.setStandardButtons(QDialogButtonBox.Cancel|QDialogButtonBox.Ok)
+
         self.verticalLayout.addWidget(self.buttonBox)
 
+
         self.retranslateUi(AddParameterDialog)
-        QtCore.QObject.connect(self.buttonBox, QtCore.SIGNAL("accepted()"), AddParameterDialog.accept)
-        QtCore.QObject.connect(self.buttonBox, QtCore.SIGNAL("rejected()"), AddParameterDialog.reject)
-        QtCore.QMetaObject.connectSlotsByName(AddParameterDialog)
+        self.buttonBox.accepted.connect(AddParameterDialog.accept)
+        self.buttonBox.rejected.connect(AddParameterDialog.reject)
+
+        QMetaObject.connectSlotsByName(AddParameterDialog)
+    # setupUi
 
     def retranslateUi(self, AddParameterDialog):
-        AddParameterDialog.setWindowTitle(QtGui.QApplication.translate("AddParameterDialog", "Add Parameter", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_3.setText(QtGui.QApplication.translate("AddParameterDialog", "Add a new parameter with the label and value specified here. Note that  a colon will be added to the label automatically:", None, QtGui.QApplication.UnicodeUTF8))
-        self.label.setText(QtGui.QApplication.translate("AddParameterDialog", "Parameter label:", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_2.setText(QtGui.QApplication.translate("AddParameterDialog", "Parameter value:", None, QtGui.QApplication.UnicodeUTF8))
+        AddParameterDialog.setWindowTitle(QCoreApplication.translate("AddParameterDialog", u"Add Parameter", None))
+        self.groupBox.setTitle("")
+        self.label_3.setText(QCoreApplication.translate("AddParameterDialog", u"Add a new parameter with the label and value specified here. Note that  a colon will be added to the label automatically for visual effect only:", None))
+        self.label.setText(QCoreApplication.translate("AddParameterDialog", u"Parameter label:", None))
+        self.label_2.setText(QCoreApplication.translate("AddParameterDialog", u"Parameter value:", None))
+    # retranslateUi
 

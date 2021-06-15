@@ -1,13 +1,11 @@
-
-
-from PySide import QtGui
+from PySide2 import QtWidgets
 from mapclientplugins.parametersettingstep.ui_addparameterdialog import Ui_AddParameterDialog
 
 
-class AddParameterDialog(QtGui.QDialog):
+class AddParameterDialog(QtWidgets.QDialog):
 
     def __init__(self, parent=None):
-        QtGui.QDialog.__init__(self, parent)
+        QtWidgets.QDialog.__init__(self, parent)
 
         self._ui = Ui_AddParameterDialog()
         self._ui.setupUi(self)

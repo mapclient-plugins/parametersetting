@@ -1,4 +1,4 @@
-from PySide2 import QtGui, QtWidgets
+from PySide6 import QtGui, QtWidgets
 
 from mapclientplugins.parametersettingstep.addparameterdialog import AddParameterDialog
 from mapclientplugins.parametersettingstep.ui_configuredialog import Ui_ConfigureDialog
